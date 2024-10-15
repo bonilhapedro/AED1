@@ -1,21 +1,21 @@
 #include <stdio.h>
- 
+
 int main() {
- 
     int T, resultado = 0;
     int vetor[5];
-    
+
     scanf("%d", &T);
-    scanf("%d %d %d %d %d", &vetor[0], &vetor[1], &vetor[2], &vetor[3], &vetor[4]);
-    
-    
-    for (int i = 0; i<5; i++){
-        if (T==vetor[i]){
+
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &vetor[i]);
+    }
+
+    for (int i = 0; i < 5; i++) {
+        if (vetor[i] == T) {
             resultado++;
         }
     }
-    
+
     printf("%d\n", resultado);
- 
     return 0;
 }
