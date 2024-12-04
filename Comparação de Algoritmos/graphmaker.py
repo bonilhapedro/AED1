@@ -1,17 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Extraindo dados
 n = data['n'].values
 insertion_time = data['InsertionSort'].values
 merge_time = data['MergeSort'].values
 quick_time = data['QuickSort'].values
 
-# Curvas teóricas
 n_squared = n ** 2
 n_log_n = n * np.log2(n)
 
-# Normalizar para escala dos tempos experimentais
 norm_insertion = insertion_time[-1] / n_squared[-1]
 norm_merge = merge_time[-1] / n_log_n[-1]
 norm_quick = quick_time[-1] / n_log_n[-1]
